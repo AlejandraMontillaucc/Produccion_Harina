@@ -38,7 +38,39 @@
         /* =====================================================
            VARIABLES
         ===================================================== */
-    
+    .footer-authors {
+    margin-top: 28px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.footer-authors-label {
+    color: #D8BD7A;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.footer-authors-label i {
+    margin-right: 6px;
+}
+
+.footer-authors p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 12px;
+}
+
+.footer-authors strong {
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 500;
+}
     
         .plant-placeholder img {
     width: 100%;
@@ -2371,7 +2403,7 @@
     <div class="container">
 
         <img 
-            src="../images/plano.png" 
+            src="./images/plano.png" 
             alt="Diseño de la planta de producción de harina"
             class="plant-main-image"
         >
@@ -2592,7 +2624,7 @@
 
                 <div class="material-image">
 
-                    <img src="../images/trigo.png" alt="Grano de trigo">  
+                    <img src="./images/trigo.png" alt="Grano de trigo">  
 
                 </div>
 
@@ -2628,7 +2660,7 @@
 
                 <div class="material-image">
 
-                    <img src="../images/aguatratada.png" alt="Agua tratada">
+                    <img src="./images/aguatratada.png" alt="Agua tratada">
   
 
                 </div>
@@ -2665,7 +2697,7 @@
 
                 <div class="material-image">
 
-                    <img src="../images/energiaelectrica.png" alt="Energía eléctrica">
+                    <img src="./images/energiaelectrica.png" alt="Energía eléctrica">
 
                 </div>
 
@@ -2700,7 +2732,7 @@
 
                 <div class="material-image">
 
-                    <img src="../images/vitaminasMinerales.png" alt="Vitaminas y minerales">
+                    <img src="./images/vitaminasMinerales.png" alt="Vitaminas y minerales">
 
                 </div>
 
@@ -2735,7 +2767,7 @@
 
                 <div class="material-image">
 
-                    <img src="../images/sacos.png" alt="Sacos y empalme">
+                    <img src="./images/sacos.png" alt="Sacos y empalme">
 
 
                 </div>
@@ -2771,7 +2803,7 @@
 
                 <div class="material-image">
 
-                    <img src="../images/calidad.png" alt="Insumos de saneamiento">
+                    <img src="./images/calidad.png" alt="Insumos de saneamiento">
 
                 </div>
 
@@ -4543,7 +4575,7 @@
         <h3>Plano 2D</h3>
 
         <img 
-            src="../images/plano2d.png" 
+            src="./images/plano2d.png" 
             alt="Plano 2D de la planta">
     </div>
 
@@ -4552,7 +4584,7 @@
     <h3>Modelo 3D</h3>
 
     <video controls>
-        <source src="../images/modelo3d.mp4" type="video/mp4">
+        <source src="./images/modelo3d.mp4" type="video/mp4">
         Tu navegador no soporta la reproducción de video.
     </video>
 </div>
@@ -4803,11 +4835,17 @@
 
                 </ul>
 
-                <span>
-                Elaborado por: Valeria Josa, Santiago Castro
-            </span>
+                <div class="footer-authors">
+    <span class="footer-authors-label">
+        <i class="fa-solid fa-graduation-cap"></i>
+        Proyecto académico
+    </span>
 
-            </div>
+    <p>Elaborado por</p>
+
+    <strong>Valeria Esthefanía Josa Diaz</strong>
+    <strong>Jorge Santiago Castro de la cruz</strong>
+</div>
 
 
         </div>
