@@ -1,0 +1,4072 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Organización MAS | Planta de Producción de Harina
+    </title>
+
+
+    <!-- GOOGLE FONT -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
+          rel="stylesheet">
+
+
+    <!-- ICONOS -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <style>
+
+        /* =====================================================
+           VARIABLES
+        ===================================================== */
+
+        :root {
+
+            --mas-dark: #071c2c;
+            --mas-blue: #0c3149;
+            --mas-blue-light: #1d5878;
+
+            --mas-gold: #c9a45c;
+            --mas-gold-light: #e1c98f;
+
+            --cream: #f7f4ed;
+            --white: #ffffff;
+
+            --text: #1d2a32;
+            --text-light: #66727a;
+
+            --border: #e6e1d7;
+
+            --shadow:
+                0 15px 40px rgba(7, 28, 44, 0.10);
+
+            --radius: 18px;
+        }
+
+
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            font-family:
+                'Montserrat',
+                sans-serif;
+
+            background:
+                var(--cream);
+
+            color:
+                var(--text);
+
+            line-height: 1.7;
+        }
+
+
+        img {
+
+            max-width: 100%;
+            display: block;
+        }
+
+
+        a {
+            text-decoration: none;
+        }
+
+
+        /* =====================================================
+           NAVBAR
+        ===================================================== */
+
+        header {
+
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+
+            z-index: 1000;
+
+            background:
+                rgba(7, 28, 44, 0.96);
+
+            backdrop-filter:
+                blur(12px);
+
+            border-bottom:
+                1px solid rgba(255,255,255,.08);
+        }
+
+
+        .navbar {
+
+            width: min(1200px, 92%);
+
+            margin: auto;
+
+            height: 82px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+        }
+
+
+        /* LOGO */
+
+        .logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            color: white;
+        }
+
+
+        .logo img {
+
+            width: 105px;
+
+            height: auto;
+        }
+
+
+        .logo-text {
+
+            border-left:
+                1px solid rgba(255,255,255,.25);
+
+            padding-left: 12px;
+
+            font-size: 11px;
+
+            line-height: 1.3;
+
+            letter-spacing: 1px;
+
+            color:
+                rgba(255,255,255,.75);
+        }
+
+
+        /* MENU */
+
+        .nav-links {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 30px;
+
+            list-style: none;
+        }
+
+
+        .nav-links a {
+
+            color:
+                rgba(255,255,255,.85);
+
+            font-size: 13px;
+
+            font-weight: 500;
+
+            letter-spacing: .3px;
+
+            transition:
+                .3s;
+        }
+
+
+        .nav-links a:hover {
+
+            color:
+                var(--mas-gold-light);
+        }
+
+
+        .nav-button {
+
+            padding:
+                11px 20px;
+
+            border:
+                1px solid var(--mas-gold);
+
+            color:
+                var(--mas-gold-light) !important;
+
+            border-radius:
+                30px;
+        }
+
+
+        .nav-button:hover {
+
+            background:
+                var(--mas-gold);
+
+            color:
+                var(--mas-dark) !important;
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+
+            min-height:
+                100vh;
+
+            position:
+                relative;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            overflow:
+                hidden;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    rgba(7,28,44,.97) 0%,
+                    rgba(7,28,44,.88) 45%,
+                    rgba(7,28,44,.35) 100%
+                ),
+
+                url("https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=2000&q=80")
+
+                center / cover;
+        }
+
+
+        .hero::after {
+
+            content: "";
+
+            position:
+                absolute;
+
+            width:
+                500px;
+
+            height:
+                500px;
+
+            border-radius:
+                50%;
+
+            border:
+                1px solid rgba(201,164,92,.25);
+
+            right:
+                -180px;
+
+            bottom:
+                -180px;
+        }
+
+
+        .hero-content {
+
+            width:
+                min(1200px, 92%);
+
+            margin:
+                82px auto 0;
+
+            position:
+                relative;
+
+            z-index:
+                2;
+        }
+
+
+        .hero-tag {
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            gap:
+                10px;
+
+            color:
+                var(--mas-gold-light);
+
+            font-size:
+                12px;
+
+            font-weight:
+                600;
+
+            letter-spacing:
+                2px;
+
+            text-transform:
+                uppercase;
+
+            margin-bottom:
+                22px;
+        }
+
+
+        .hero-tag::before {
+
+            content:
+                "";
+
+            width:
+                35px;
+
+            height:
+                1px;
+
+            background:
+                var(--mas-gold);
+        }
+
+
+        .hero h1 {
+
+            max-width:
+                780px;
+
+            color:
+                white;
+
+            font-family:
+                'Playfair Display',
+                serif;
+
+            font-size:
+                clamp(48px, 6vw, 82px);
+
+            line-height:
+                1.05;
+
+            font-weight:
+                600;
+        }
+
+
+        .hero h1 span {
+
+            color:
+                var(--mas-gold-light);
+        }
+
+
+        .hero-description {
+
+            max-width:
+                700px;
+
+            margin-top:
+                28px;
+
+            color:
+                rgba(255,255,255,.75);
+
+            font-size:
+                17px;
+
+            line-height:
+                1.8;
+        }
+
+
+        .hero-actions {
+
+            display:
+                flex;
+
+            gap:
+                15px;
+
+            margin-top:
+                35px;
+        }
+
+
+        .btn {
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            gap:
+                10px;
+
+            padding:
+                14px 25px;
+
+            border-radius:
+                5px;
+
+            font-size:
+                13px;
+
+            font-weight:
+                600;
+
+            transition:
+                .3s;
+        }
+
+
+        .btn-primary {
+
+            background:
+                var(--mas-gold);
+
+            color:
+                var(--mas-dark);
+        }
+
+
+        .btn-primary:hover {
+
+            transform:
+                translateY(-3px);
+
+            box-shadow:
+                0 10px 25px rgba(201,164,92,.25);
+        }
+
+
+        .btn-outline {
+
+            color:
+                white;
+
+            border:
+                1px solid rgba(255,255,255,.35);
+        }
+
+
+        .btn-outline:hover {
+
+            border-color:
+                var(--mas-gold);
+
+            color:
+                var(--mas-gold-light);
+        }
+
+
+        /* =====================================================
+           SECCIONES
+        ===================================================== */
+
+        section {
+
+            padding:
+                110px 0;
+        }
+
+
+        .container {
+
+            width:
+                min(1200px, 92%);
+
+            margin:
+                auto;
+        }
+
+
+        .section-header {
+
+            max-width:
+                760px;
+
+            margin-bottom:
+                55px;
+        }
+
+
+        .section-label {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                12px;
+
+            color:
+                var(--mas-gold);
+
+            text-transform:
+                uppercase;
+
+            letter-spacing:
+                2px;
+
+            font-size:
+                11px;
+
+            font-weight:
+                700;
+
+            margin-bottom:
+                15px;
+        }
+
+
+        .section-label::before {
+
+            content:
+                "";
+
+            width:
+                35px;
+
+            height:
+                2px;
+
+            background:
+                var(--mas-gold);
+        }
+
+
+        .section-title {
+
+            font-family:
+                'Playfair Display',
+                serif;
+
+            font-size:
+                clamp(35px, 4vw, 55px);
+
+            line-height:
+                1.15;
+
+            color:
+                var(--mas-dark);
+
+            margin-bottom:
+                18px;
+        }
+
+
+        .section-description {
+
+            color:
+                var(--text-light);
+
+            font-size:
+                15px;
+
+            line-height:
+                1.8;
+        }
+
+
+        /* =====================================================
+           INTRO
+        ===================================================== */
+
+        .intro {
+
+            background:
+                var(--white);
+        }
+
+
+        .intro-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1.2fr .8fr;
+
+            gap:
+                70px;
+
+            align-items:
+                center;
+        }
+
+
+        .intro-text p {
+
+            color:
+                var(--text-light);
+
+            margin-bottom:
+                20px;
+
+            font-size:
+                15px;
+        }
+
+
+        .intro-card {
+
+            position:
+                relative;
+
+            padding:
+                45px;
+
+            background:
+                var(--mas-dark);
+
+            color:
+                white;
+
+            border-radius:
+                var(--radius);
+
+            overflow:
+                hidden;
+
+            box-shadow:
+                var(--shadow);
+        }
+
+
+        .intro-card::before {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            width:
+                180px;
+
+            height:
+                180px;
+
+            border-radius:
+                50%;
+
+            border:
+                1px solid rgba(201,164,92,.35);
+
+            right:
+                -70px;
+
+            top:
+                -70px;
+        }
+
+
+        .intro-card i {
+
+            font-size:
+                32px;
+
+            color:
+                var(--mas-gold);
+
+            margin-bottom:
+                20px;
+        }
+
+
+        .intro-card h3 {
+
+            font-family:
+                'Playfair Display',
+                serif;
+
+            font-size:
+                28px;
+
+            margin-bottom:
+                15px;
+        }
+
+
+        .intro-card p {
+
+            color:
+                rgba(255,255,255,.7);
+
+            font-size:
+                14px;
+        }
+
+
+        /* =====================================================
+           INDICADORES
+        ===================================================== */
+
+        .stats {
+
+            background:
+                var(--mas-dark);
+
+            padding:
+                45px 0;
+        }
+
+
+        .stats-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap:
+                20px;
+        }
+
+
+        .stat {
+
+            text-align:
+                center;
+
+            border-right:
+                1px solid rgba(255,255,255,.12);
+        }
+
+
+        .stat:last-child {
+
+            border:
+                none;
+        }
+
+
+        .stat-number {
+
+            color:
+                var(--mas-gold-light);
+
+            font-size:
+                34px;
+
+            font-weight:
+                700;
+        }
+
+
+        .stat-label {
+
+            color:
+                rgba(255,255,255,.6);
+
+            font-size:
+                12px;
+
+            text-transform:
+                uppercase;
+
+            letter-spacing:
+                1px;
+        }
+
+
+        /* =====================================================
+           MATERIAS PRIMAS
+        ===================================================== */
+
+        .materials {
+
+            background:
+                var(--cream);
+        }
+
+
+        .materials-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap:
+                22px;
+        }
+
+
+        .material-card {
+
+            background:
+                white;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                var(--radius);
+
+            overflow:
+                hidden;
+
+            transition:
+                .35s;
+        }
+
+
+        .material-card:hover {
+
+            transform:
+                translateY(-8px);
+
+            box-shadow:
+                var(--shadow);
+        }
+
+
+        .material-image {
+
+            height:
+                190px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #d6bd82,
+                    #f2e7c9
+                );
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            position:
+                relative;
+        }
+
+
+        .material-image i {
+
+            font-size:
+                60px;
+
+            color:
+                rgba(7,28,44,.65);
+        }
+
+
+        .image-placeholder {
+
+            position:
+                absolute;
+
+            bottom:
+                12px;
+
+            left:
+                12px;
+
+            padding:
+                5px 9px;
+
+            background:
+                rgba(7,28,44,.8);
+
+            color:
+                white;
+
+            font-size:
+                9px;
+
+            letter-spacing:
+                1px;
+
+            border-radius:
+                4px;
+        }
+
+
+        .material-content {
+
+            padding:
+                25px;
+        }
+
+
+        .material-number {
+
+            color:
+                var(--mas-gold);
+
+            font-size:
+                11px;
+
+            font-weight:
+                700;
+
+            letter-spacing:
+                2px;
+        }
+
+
+        .material-content h3 {
+
+            color:
+                var(--mas-dark);
+
+            margin:
+                7px 0 10px;
+
+            font-size:
+                20px;
+        }
+
+
+        .material-content p {
+
+            color:
+                var(--text-light);
+
+            font-size:
+                13px;
+
+            line-height:
+                1.7;
+        }
+
+
+        /* =====================================================
+           PROCESO
+        ===================================================== */
+
+        .process {
+
+            background:
+                white;
+        }
+
+
+        .process-flow {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(5, 1fr);
+
+            gap:
+                0;
+
+            position:
+                relative;
+        }
+
+
+        .process-flow::before {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            top:
+                43px;
+
+            left:
+                8%;
+
+            right:
+                8%;
+
+            height:
+                2px;
+
+            background:
+                var(--border);
+
+            z-index:
+                0;
+        }
+
+
+        .process-step {
+
+            position:
+                relative;
+
+            z-index:
+                1;
+
+            text-align:
+                center;
+
+            padding:
+                0 12px;
+        }
+
+
+        .process-icon {
+
+            width:
+                86px;
+
+            height:
+                86px;
+
+            margin:
+                auto;
+
+            border-radius:
+                50%;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            background:
+                white;
+
+            border:
+                2px solid var(--mas-gold);
+
+            color:
+                var(--mas-dark);
+
+            font-size:
+                25px;
+        }
+
+
+        .process-step h3 {
+
+            margin-top:
+                20px;
+
+            font-size:
+                15px;
+
+            color:
+                var(--mas-dark);
+        }
+
+
+        .process-step p {
+
+            margin-top:
+                7px;
+
+            color:
+                var(--text-light);
+
+            font-size:
+                11px;
+        }
+
+
+        /* =====================================================
+           MAQUINARIA
+        ===================================================== */
+
+        .machinery {
+
+            background:
+                var(--mas-dark);
+
+            color:
+                white;
+        }
+
+
+        .machinery .section-title {
+
+            color:
+                white;
+        }
+
+
+        .machinery .section-description {
+
+            color:
+                rgba(255,255,255,.65);
+        }
+
+
+        .machine-table {
+
+            width:
+                100%;
+
+            border-collapse:
+                collapse;
+
+            overflow:
+                hidden;
+
+            border-radius:
+                12px;
+        }
+
+
+        .machine-table th {
+
+            background:
+                var(--mas-gold);
+
+            color:
+                var(--mas-dark);
+
+            padding:
+                17px;
+
+            text-align:
+                left;
+
+            font-size:
+                12px;
+        }
+
+
+        .machine-table td {
+
+            padding:
+                16px;
+
+            border-bottom:
+                1px solid rgba(255,255,255,.08);
+
+            font-size:
+                12px;
+
+            color:
+                rgba(255,255,255,.72);
+        }
+
+
+        .machine-table tr:hover td {
+
+            background:
+                rgba(255,255,255,.04);
+        }
+
+
+        .machine-number {
+
+            color:
+                var(--mas-gold-light);
+
+            font-weight:
+                700;
+        }
+
+
+        /* =====================================================
+           CARACTERIZACIÓN
+        ===================================================== */
+
+        .characterization {
+
+            background:
+                var(--cream);
+        }
+
+
+        .process-info {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap:
+                25px;
+
+            margin-bottom:
+                45px;
+        }
+
+
+        .info-box {
+
+            background:
+                white;
+
+            padding:
+                30px;
+
+            border-radius:
+                14px;
+
+            border-left:
+                4px solid var(--mas-gold);
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,.04);
+        }
+
+
+        .info-box span {
+
+            display:
+                block;
+
+            color:
+                var(--mas-gold);
+
+            text-transform:
+                uppercase;
+
+            letter-spacing:
+                1px;
+
+            font-size:
+                10px;
+
+            font-weight:
+                700;
+
+            margin-bottom:
+                8px;
+        }
+
+
+        .info-box h3 {
+
+            color:
+                var(--mas-dark);
+
+            font-size:
+                18px;
+        }
+
+
+        /* SUBPROCESOS */
+
+        .subprocess-list {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap:
+                15px;
+        }
+
+
+        .subprocess {
+
+            background:
+                white;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                12px;
+
+            overflow:
+                hidden;
+        }
+
+
+        .subprocess-header {
+
+            padding:
+                18px 22px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+
+            cursor:
+                pointer;
+        }
+
+
+        .subprocess-title {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                15px;
+        }
+
+
+        .subprocess-number {
+
+            width:
+                35px;
+
+            height:
+                35px;
+
+            border-radius:
+                50%;
+
+            background:
+                var(--mas-dark);
+
+            color:
+                var(--mas-gold-light);
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            font-size:
+                11px;
+
+            font-weight:
+                700;
+        }
+
+
+        .subprocess h3 {
+
+            font-size:
+                13px;
+
+            color:
+                var(--mas-dark);
+        }
+
+
+        .subprocess-content {
+
+            max-height:
+                0;
+
+            overflow:
+                hidden;
+
+            transition:
+                .4s;
+
+            padding:
+                0 22px;
+        }
+
+
+        .subprocess.active
+        .subprocess-content {
+
+            max-height:
+                300px;
+
+            padding:
+                0 22px 22px;
+        }
+
+
+        .subprocess-content p {
+
+            font-size:
+                12px;
+
+            color:
+                var(--text-light);
+
+            margin-bottom:
+                8px;
+        }
+
+
+        .subprocess-content strong {
+
+            color:
+                var(--mas-dark);
+        }
+
+
+        /* =====================================================
+           PLANTA
+        ===================================================== */
+
+        .plant {
+
+            background:
+                white;
+        }
+
+
+        .plant-layout {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap:
+                25px;
+        }
+
+
+        .plant-card {
+
+            min-height:
+                390px;
+
+            border-radius:
+                var(--radius);
+
+            overflow:
+                hidden;
+
+            position:
+                relative;
+
+            display:
+                flex;
+
+            align-items:
+                flex-end;
+
+            padding:
+                35px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #d8d3c7,
+                    #f5f3ed
+                );
+
+            border:
+                1px solid var(--border);
+        }
+
+
+        .plant-card::before {
+
+            content:
+                "PLANO 2D";
+
+            position:
+                absolute;
+
+            top:
+                25px;
+
+            left:
+                25px;
+
+            color:
+                rgba(7,28,44,.35);
+
+            font-size:
+                11px;
+
+            font-weight:
+                700;
+
+            letter-spacing:
+                2px;
+        }
+
+
+        .plant-card.model::before {
+
+            content:
+                "MODELO 3D";
+        }
+
+
+        .plant-content {
+
+            background:
+                rgba(7,28,44,.94);
+
+            padding:
+                20px;
+
+            border-radius:
+                10px;
+
+            width:
+                100%;
+
+            color:
+                white;
+        }
+
+
+        .plant-content h3 {
+
+            font-size:
+                20px;
+
+            margin-bottom:
+                5px;
+        }
+
+
+        .plant-content p {
+
+            color:
+                rgba(255,255,255,.65);
+
+            font-size:
+                12px;
+        }
+
+
+        /* =====================================================
+           LOCALIZACIÓN
+        ===================================================== */
+
+        .location {
+
+            background:
+                var(--cream);
+        }
+
+
+        .location-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                .8fr 1.2fr;
+
+            gap:
+                25px;
+        }
+
+
+        .location-info {
+
+            background:
+                var(--mas-dark);
+
+            color:
+                white;
+
+            border-radius:
+                var(--radius);
+
+            padding:
+                40px;
+        }
+
+
+        .location-info h3 {
+
+            font-family:
+                'Playfair Display',
+                serif;
+
+            font-size:
+                32px;
+
+            margin-bottom:
+                20px;
+        }
+
+
+        .location-info p {
+
+            color:
+                rgba(255,255,255,.65);
+
+            font-size:
+                13px;
+        }
+
+
+        .location-item {
+
+            display:
+                flex;
+
+            gap:
+                15px;
+
+            margin-top:
+                25px;
+        }
+
+
+        .location-item i {
+
+            color:
+                var(--mas-gold);
+        }
+
+
+        .map-placeholder {
+
+            min-height:
+                420px;
+
+            background:
+                #dfe4e2;
+
+            border-radius:
+                var(--radius);
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            text-align:
+                center;
+
+            border:
+                1px solid var(--border);
+        }
+
+
+        .map-placeholder i {
+
+            font-size:
+                50px;
+
+            color:
+                var(--mas-blue);
+        }
+
+
+        /* =====================================================
+           REFERENCIA
+        ===================================================== */
+
+        .reference {
+
+            background:
+                var(--mas-blue);
+
+            color:
+                white;
+
+            text-align:
+                center;
+        }
+
+
+        .reference h2 {
+
+            font-family:
+                'Playfair Display',
+                serif;
+
+            font-size:
+                40px;
+
+            margin-bottom:
+                15px;
+        }
+
+
+        .reference p {
+
+            max-width:
+                700px;
+
+            margin:
+                auto auto 25px;
+
+            color:
+                rgba(255,255,255,.7);
+
+            font-size:
+                14px;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+
+            background:
+                #04131e;
+
+            color:
+                white;
+
+            padding:
+                65px 0 25px;
+        }
+
+
+        .footer-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1.4fr .8fr .8fr;
+
+            gap:
+                50px;
+
+            padding-bottom:
+                45px;
+
+            border-bottom:
+                1px solid rgba(255,255,255,.1);
+        }
+
+
+        .footer-logo img {
+
+            width:
+                120px;
+
+            margin-bottom:
+                20px;
+        }
+
+
+        .footer-logo p {
+
+            color:
+                rgba(255,255,255,.5);
+
+            font-size:
+                12px;
+
+            max-width:
+                380px;
+        }
+
+
+        footer h4 {
+
+            color:
+                var(--mas-gold-light);
+
+            margin-bottom:
+                15px;
+
+            font-size:
+                12px;
+
+            text-transform:
+                uppercase;
+
+            letter-spacing:
+                1px;
+        }
+
+
+        footer ul {
+
+            list-style:
+                none;
+        }
+
+
+        footer li {
+
+            margin-bottom:
+                8px;
+        }
+
+
+        footer li a {
+
+            color:
+                rgba(255,255,255,.55);
+
+            font-size:
+                12px;
+        }
+
+
+        .footer-bottom {
+
+            padding-top:
+                22px;
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            color:
+                rgba(255,255,255,.35);
+
+            font-size:
+                10px;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media(max-width: 900px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .intro-grid,
+            .location-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .materials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .process-flow {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 35px;
+            }
+
+            .process-flow::before {
+                display: none;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+
+            .stat {
+                border: none;
+            }
+
+            .plant-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .subprocess-list {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+
+        @media(max-width: 600px) {
+
+            section {
+                padding: 75px 0;
+            }
+
+            .materials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-flow {
+                grid-template-columns: 1fr;
+            }
+
+            .process-info {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header>
+
+    <nav class="navbar">
+
+
+        <a href="#inicio" class="logo">
+
+            <!-- LOGO OFICIAL -->
+
+            <img
+                src="https://www.organizacionmas.com/img/converted_white.svg"
+                alt="Organización MAS"
+            >
+
+            <span class="logo-text">
+                PROYECTO<br>
+                PLANTA INDUSTRIAL
+            </span>
+
+        </a>
+
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="#inicio">
+                    Inicio
+                </a>
+            </li>
+
+            <li>
+                <a href="#materias">
+                    Materias primas
+                </a>
+            </li>
+
+            <li>
+                <a href="#proceso">
+                    Proceso
+                </a>
+            </li>
+
+            <li>
+                <a href="#maquinaria">
+                    Maquinaria
+                </a>
+            </li>
+
+            <li>
+                <a href="#caracterizacion">
+                    Caracterización
+                </a>
+            </li>
+
+            <li>
+                <a href="#planta">
+                    Planta
+                </a>
+            </li>
+
+            <li>
+                <a href="#contacto"
+                   class="nav-button">
+
+                    Proyecto
+
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero" id="inicio">
+
+    <div class="hero-content">
+
+        <div class="hero-tag">
+
+            Organización MAS
+
+        </div>
+
+
+        <h1>
+
+            Diseño de una
+            <span>
+                planta industrial
+            </span>
+            para harina de trigo.
+
+        </h1>
+
+
+        <p class="hero-description">
+
+            Propuesta de diseño y distribución de planta
+            para la transformación del trigo en harina,
+            integrando procesos, maquinaria, recorridos
+            de materiales y condiciones de operación.
+
+        </p>
+
+
+        <div class="hero-actions">
+
+            <a href="#proceso"
+               class="btn btn-primary">
+
+                Explorar proceso
+
+                <i class="fa-solid fa-arrow-down"></i>
+
+            </a>
+
+
+            <a href="#planta"
+               class="btn btn-outline">
+
+                Ver diseño de planta
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     INTRODUCCIÓN
+===================================================== -->
+
+<section class="intro">
+
+    <div class="container">
+
+        <div class="intro-grid">
+
+
+            <div class="intro-text">
+
+                <div class="section-label">
+                    Proyecto
+                </div>
+
+
+                <h2 class="section-title">
+
+                    Diseño de planta
+                    para la producción
+                    de harina.
+
+                </h2>
+
+
+                <p>
+
+                    El presente proyecto tiene como objetivo
+                    desarrollar el diseño de una planta
+                    industrial para la producción de harina,
+                    mediante el análisis y estructuración del
+                    proceso productivo.
+
+                </p>
+
+
+                <p>
+
+                    La propuesta integra la distribución de
+                    áreas, selección y disposición de maquinaria,
+                    recorridos de materiales y condiciones de
+                    operación.
+
+                </p>
+
+
+                <p>
+
+                    El diseño busca establecer una distribución
+                    eficiente que favorezca el flujo continuo
+                    del proceso, reduzca desplazamientos
+                    innecesarios y permita aprovechar
+                    adecuadamente el espacio y los recursos.
+
+                </p>
+
+            </div>
+
+
+            <div class="intro-card">
+
+                <i class="fa-solid fa-industry"></i>
+
+                <h3>
+                    Planta de producción
+                </h3>
+
+                <p>
+
+                    Organización MAS presenta una propuesta
+                    académica de distribución para una planta
+                    dedicada a la elaboración de harina de trigo.
+
+                </p>
+
+                <br>
+
+                <p>
+
+                    Desde la recepción del grano hasta el
+                    almacenamiento y despacho del producto
+                    terminado.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     INDICADORES
+===================================================== -->
+
+<section class="stats">
+
+    <div class="container">
+
+        <div class="stats-grid">
+
+
+            <div class="stat">
+
+                <div class="stat-number">
+                    22
+                </div>
+
+                <div class="stat-label">
+                    Equipos y maquinaria
+                </div>
+
+            </div>
+
+
+            <div class="stat">
+
+                <div class="stat-number">
+                    10
+                </div>
+
+                <div class="stat-label">
+                    Subprocesos
+                </div>
+
+            </div>
+
+
+            <div class="stat">
+
+                <div class="stat-number">
+                    6
+                </div>
+
+                <div class="stat-label">
+                    Etapas principales
+                </div>
+
+            </div>
+
+
+            <div class="stat">
+
+                <div class="stat-number">
+                    01
+                </div>
+
+                <div class="stat-label">
+                    Línea productiva
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MATERIAS PRIMAS
+===================================================== -->
+
+<section class="materials"
+         id="materias">
+
+    <div class="container">
+
+
+        <div class="section-header">
+
+            <div class="section-label">
+                Abastecimiento
+            </div>
+
+            <h2 class="section-title">
+                Materias primas e insumos
+            </h2>
+
+            <p class="section-description">
+
+                Elementos necesarios para garantizar
+                el funcionamiento de la planta y la
+                transformación del trigo en harina.
+
+            </p>
+
+        </div>
+
+
+        <div class="materials-grid">
+
+
+            <!-- TRIGO -->
+
+            <article class="material-card">
+
+                <div class="material-image">
+
+                    <i class="fa-solid fa-wheat-awn"></i>
+
+                    <span class="image-placeholder">
+                        ESPACIO PARA IMAGEN
+                    </span>
+
+                </div>
+
+
+                <div class="material-content">
+
+                    <span class="material-number">
+                        01 / PRINCIPAL
+                    </span>
+
+                    <h3>
+                        Grano de trigo
+                    </h3>
+
+                    <p>
+
+                        Materia prima principal de la
+                        producción. Constituye la base
+                        para obtener harina mediante
+                        limpieza, acondicionamiento,
+                        molienda y clasificación.
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- AGUA -->
+
+            <article class="material-card">
+
+                <div class="material-image">
+
+                    <i class="fa-solid fa-droplet"></i>
+
+                    <span class="image-placeholder">
+                        ESPACIO PARA IMAGEN
+                    </span>
+
+                </div>
+
+
+                <div class="material-content">
+
+                    <span class="material-number">
+                        02 / PROCESO
+                    </span>
+
+                    <h3>
+                        Agua tratada
+                    </h3>
+
+                    <p>
+
+                        Utilizada durante el
+                        acondicionamiento o temperado
+                        del trigo para alcanzar la
+                        humedad requerida antes de
+                        la molienda.
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- ENERGÍA -->
+
+            <article class="material-card">
+
+                <div class="material-image">
+
+                    <i class="fa-solid fa-bolt"></i>
+
+                </div>
+
+
+                <div class="material-content">
+
+                    <span class="material-number">
+                        03 / ENERGÍA
+                    </span>
+
+                    <h3>
+                        Energía eléctrica
+                    </h3>
+
+                    <p>
+
+                        Insumo indispensable para la
+                        operación de molinos, sistemas
+                        de aspiración, transportadores,
+                        silos y equipos auxiliares.
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- ADITIVOS -->
+
+            <article class="material-card">
+
+                <div class="material-image">
+
+                    <i class="fa-solid fa-flask"></i>
+
+                </div>
+
+
+                <div class="material-content">
+
+                    <span class="material-number">
+                        04 / FORTIFICACIÓN
+                    </span>
+
+                    <h3>
+                        Vitaminas y minerales
+                    </h3>
+
+                    <p>
+
+                        Hierro, ácido fólico, tiamina,
+                        riboflavina y niacina utilizados
+                        en la fortificación de la harina
+                        según los requerimientos aplicables.
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- EMPAQUE -->
+
+            <article class="material-card">
+
+                <div class="material-image">
+
+                    <i class="fa-solid fa-box"></i>
+
+                    <span class="image-placeholder">
+                        ESPACIO PARA IMAGEN
+                    </span>
+
+                </div>
+
+
+                <div class="material-content">
+
+                    <span class="material-number">
+                        05 / EMPAQUE
+                    </span>
+
+                    <h3>
+                        Sacos y embalaje
+                    </h3>
+
+                    <p>
+
+                        Materiales utilizados para el
+                        envasado, etiquetado, paletizado
+                        y posterior distribución de la
+                        harina terminada.
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- SANEAMIENTO -->
+
+            <article class="material-card">
+
+                <div class="material-image">
+
+                    <i class="fa-solid fa-spray-can-sparkles"></i>
+
+                </div>
+
+
+                <div class="material-content">
+
+                    <span class="material-number">
+                        06 / CALIDAD
+                    </span>
+
+                    <h3>
+                        Insumos de saneamiento
+                    </h3>
+
+                    <p>
+
+                        Agentes de limpieza y desinfección
+                        de grado alimenticio destinados
+                        al mantenimiento de equipos,
+                        silos y áreas productivas.
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PROCESO PRODUCTIVO
+===================================================== -->
+
+<section class="process"
+         id="proceso">
+
+    <div class="container">
+
+
+        <div class="section-header">
+
+            <div class="section-label">
+                Flujo productivo
+            </div>
+
+            <h2 class="section-title">
+                Del trigo a la harina
+            </h2>
+
+            <p class="section-description">
+
+                Secuencia general de transformación
+                de la materia prima hasta obtener
+                el producto terminado.
+
+            </p>
+
+        </div>
+
+
+        <div class="process-flow">
+
+
+            <div class="process-step">
+
+                <div class="process-icon">
+                    <i class="fa-solid fa-truck-ramp-box"></i>
+                </div>
+
+                <h3>
+                    Recepción
+                </h3>
+
+                <p>
+                    Control y descarga
+                </p>
+
+            </div>
+
+
+            <div class="process-step">
+
+                <div class="process-icon">
+                    <i class="fa-solid fa-filter"></i>
+                </div>
+
+                <h3>
+                    Limpieza
+                </h3>
+
+                <p>
+                    Eliminación de impurezas
+                </p>
+
+            </div>
+
+
+            <div class="process-step">
+
+                <div class="process-icon">
+                    <i class="fa-solid fa-droplet"></i>
+                </div>
+
+                <h3>
+                    Acondicionamiento
+                </h3>
+
+                <p>
+                    Humectación y reposo
+                </p>
+
+            </div>
+
+
+            <div class="process-step">
+
+                <div class="process-icon">
+                    <i class="fa-solid fa-gears"></i>
+                </div>
+
+                <h3>
+                    Molienda
+                </h3>
+
+                <p>
+                    Reducción y separación
+                </p>
+
+            </div>
+
+
+            <div class="process-step">
+
+                <div class="process-icon">
+                    <i class="fa-solid fa-box-open"></i>
+                </div>
+
+                <h3>
+                    Empaque
+                </h3>
+
+                <p>
+                    Envasado y despacho
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MAQUINARIA
+===================================================== -->
+
+<section class="machinery"
+         id="maquinaria">
+
+    <div class="container">
+
+
+        <div class="section-header">
+
+            <div class="section-label">
+                Equipamiento industrial
+            </div>
+
+            <h2 class="section-title">
+                Maquinaria de la planta
+            </h2>
+
+            <p class="section-description">
+
+                Equipos requeridos para transportar,
+                transformar, clasificar, almacenar
+                y empacar el producto.
+
+            </p>
+
+        </div>
+
+
+        <div style="overflow-x:auto;">
+
+            <table class="machine-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            N°
+                        </th>
+
+                        <th>
+                            Maquinaria / equipo
+                        </th>
+
+                        <th>
+                            Función
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+
+                    <tr>
+
+                        <td class="machine-number">
+                            01
+                        </td>
+
+                        <td>
+                            Tolva de recepción
+                        </td>
+
+                        <td>
+                            Recibe el trigo que llega a la planta.
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td class="machine-number">
+                            02
+                        </td>
+
+                        <td>
+                            Transportador de banda
+                        </td>
+
+                        <td>
+                            Traslada el grano entre las diferentes áreas.
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td class="machine-number">
+                            03
+                        </td>
+
+                        <td>
+                            Elevador de cangilones
+                        </td>
+
+                        <td>
+                            Eleva verticalmente el grano hacia silos y equipos.
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td class="machine-number">
+                            04
+                        </td>
+
+                        <td>
+                            Silos de almacenamiento
+                        </td>
+
+                        <td>
+                            Almacenan el trigo antes y después del proceso.
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td class="machine-number">
+                            05
+                        </td>
+
+                        <td>
+                            Limpiadora de granos
+                        </td>
+
+                        <td>
+                            Elimina polvo, paja y semillas extrañas.
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td class="machine-number">
+                            06
+                        </td>
+
+                        <td>
+                            Separador / zaranda
+                        </td>
+
+                        <td>
+                            Clasifica partículas según tamaño.
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td class="machine-number">
+                            07
+                        </td>
+
+                        <td>
+                            Despedradora
+                        </td>
+
+                        <td>
+                            Retira piedras y materiales pesados.
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td class="machine-number">
+                            08
+                        </td>
+
+                        <td>
+                            Separador magnético
+                        </td>
+
+                        <td>
+                            Retira partículas metálicas.
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td class="machine-number">
+                            09
+                        </td>
+
+                        <td>
+                            Acondicionador de trigo
+                        </td>
+
+                        <td>
+                            Agrega agua para alcanzar la humedad adecuada.
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td class="machine-number">
+                            10
+                        </td>
+
+                        <td>
+                            Molino de rodillos
+                        </td>
+
+                        <td>
+                            Realiza la molienda principal del trigo.
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td class="machine-number">
+                            11
+                        </td>
+
+                        <td>
+                            Plansifter / cernedor
+                        </td>
+
+                        <td>
+                            Clasifica el producto molido por tamaño.
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td class="machine-number">
+                            12
+                        </td>
+
+                        <td>
+                            Purificador
+                        </td>
+
+                        <td>
+                            Separa salvado y endospermo.
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td class="machine-number">
+                            13
+                        </td>
+
+                        <td>
+                            Tornillo sinfín
+                        </td>
+
+                        <td>
+                            Transporta harina y subproductos.
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td class="machine-number">
+                            14
+                        </td>
+
+                        <td>
+                            Colectores de polvo
+                        </td>
+
+                        <td>
+                            Capturan el polvo generado.
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td class="machine-number">
+                            15
+                        </td>
+
+                        <td>
+                            Ventiladores industriales
+                        </td>
+
+                        <td>
+                            Generan flujo de aire para aspiración.
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td class="machine-number">
+                            16
+                        </td>
+
+                        <td>
+                            Silos de harina
+                        </td>
+
+                        <td>
+                            Almacenan la harina terminada.
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td class="machine-number">
+                            17
+                        </td>
+
+                        <td>
+                            Máquina dosificadora
+                        </td>
+
+                        <td>
+                            Dosifica la cantidad a empacar.
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td class="machine-number">
+                            18
+                        </td>
+
+                        <td>
+                            Envasadora
+                        </td>
+
+                        <td>
+                            Empaca la harina.
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td class="machine-number">
+                            19
+                        </td>
+
+                        <td>
+                            Selladora
+                        </td>
+
+                        <td>
+                            Cierra los empaques.
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td class="machine-number">
+                            20
+                        </td>
+
+                        <td>
+                            Báscula industrial
+                        </td>
+
+                        <td>
+                            Controla el peso del producto.
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td class="machine-number">
+                            21
+                        </td>
+
+                        <td>
+                            Transportador producto terminado
+                        </td>
+
+                        <td>
+                            Lleva los sacos hacia almacenamiento.
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td class="machine-number">
+                            22
+                        </td>
+
+                        <td>
+                            Montacargas
+                        </td>
+
+                        <td>
+                            Moviliza sacos, pallets y materias primas.
+                        </td>
+
+                    </tr>
+
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CARACTERIZACIÓN
+===================================================== -->
+
+<section class="characterization"
+         id="caracterizacion">
+
+    <div class="container">
+
+
+        <div class="section-header">
+
+            <div class="section-label">
+                Gestión del proceso
+            </div>
+
+            <h2 class="section-title">
+                Caracterización del proceso
+            </h2>
+
+            <p class="section-description">
+
+                Identificación del proceso general
+                y caracterización de sus principales
+                subprocesos.
+
+            </p>
+
+        </div>
+
+
+        <div class="process-info">
+
+
+            <div class="info-box">
+
+                <span>
+                    Nombre del proceso
+                </span>
+
+                <h3>
+                    Elaboración de harina de trigo
+                </h3>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <span>
+                    Líder del proceso
+                </span>
+
+                <h3>
+                    Jefe de Producción / Supervisor
+                </h3>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <span>
+                    Objetivo
+                </span>
+
+                <h3>
+                    Transformar trigo en harina
+                </h3>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <span>
+                    Alcance
+                </span>
+
+                <h3>
+                    Recepción hasta despacho
+                </h3>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="subprocess-list">
+
+
+            <!-- 1 -->
+
+            <div class="subprocess">
+
+                <div class="subprocess-header">
+
+                    <div class="subprocess-title">
+
+                        <span class="subprocess-number">
+                            01
+                        </span>
+
+                        <h3>
+                            Recepción y control de materia prima
+                        </h3>
+
+                    </div>
+
+                    <i class="fa-solid fa-plus"></i>
+
+                </div>
+
+
+                <div class="subprocess-content">
+
+                    <p>
+                        <strong>Objetivo:</strong>
+                        Verificar que el trigo cumpla las
+                        especificaciones de calidad y cantidad.
+                    </p>
+
+                    <p>
+                        <strong>Responsable:</strong>
+                        Jefe de Recepción / Analista de Calidad.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 2 -->
+
+            <div class="subprocess">
+
+                <div class="subprocess-header">
+
+                    <div class="subprocess-title">
+
+                        <span class="subprocess-number">
+                            02
+                        </span>
+
+                        <h3>
+                            Almacenamiento de trigo
+                        </h3>
+
+                    </div>
+
+                    <i class="fa-solid fa-plus"></i>
+
+                </div>
+
+
+                <div class="subprocess-content">
+
+                    <p>
+                        <strong>Objetivo:</strong>
+                        Conservar el trigo evitando plagas,
+                        hongos y pérdida de calidad.
+                    </p>
+
+                    <p>
+                        <strong>Responsable:</strong>
+                        Operario de Silos / Jefe de Planta.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 3 -->
+
+            <div class="subprocess">
+
+                <div class="subprocess-header">
+
+                    <div class="subprocess-title">
+
+                        <span class="subprocess-number">
+                            03
+                        </span>
+
+                        <h3>
+                            Limpieza
+                        </h3>
+
+                    </div>
+
+                    <i class="fa-solid fa-plus"></i>
+
+                </div>
+
+
+                <div class="subprocess-content">
+
+                    <p>
+                        <strong>Objetivo:</strong>
+                        Eliminar impurezas, piedras,
+                        metales y granos extraños.
+                    </p>
+
+                    <p>
+                        <strong>Responsable:</strong>
+                        Operario de Limpieza / Jefe de Producción.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 4 -->
+
+            <div class="subprocess">
+
+                <div class="subprocess-header">
+
+                    <div class="subprocess-title">
+
+                        <span class="subprocess-number">
+                            04
+                        </span>
+
+                        <h3>
+                            Acondicionamiento
+                        </h3>
+
+                    </div>
+
+                    <i class="fa-solid fa-plus"></i>
+
+                </div>
+
+
+                <div class="subprocess-content">
+
+                    <p>
+                        <strong>Objetivo:</strong>
+                        Llevar el trigo a la humedad adecuada
+                        para facilitar la separación.
+                    </p>
+
+                    <p>
+                        <strong>Responsable:</strong>
+                        Operario de Acondicionamiento / Calidad.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 5 -->
+
+            <div class="subprocess">
+
+                <div class="subprocess-header">
+
+                    <div class="subprocess-title">
+
+                        <span class="subprocess-number">
+                            05
+                        </span>
+
+                        <h3>
+                            Molienda
+                        </h3>
+
+                    </div>
+
+                    <i class="fa-solid fa-plus"></i>
+
+                </div>
+
+
+                <div class="subprocess-content">
+
+                    <p>
+                        <strong>Objetivo:</strong>
+                        Reducir el trigo acondicionado
+                        y separar endospermo, salvado y germen.
+                    </p>
+
+                    <p>
+                        <strong>Responsable:</strong>
+                        Molinero / Jefe de Producción.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 6 -->
+
+            <div class="subprocess">
+
+                <div class="subprocess-header">
+
+                    <div class="subprocess-title">
+
+                        <span class="subprocess-number">
+                            06
+                        </span>
+
+                        <h3>
+                            Cernido
+                        </h3>
+
+                    </div>
+
+                    <i class="fa-solid fa-plus"></i>
+
+                </div>
+
+
+                <div class="subprocess-content">
+
+                    <p>
+                        <strong>Objetivo:</strong>
+                        Clasificar el producto molido
+                        según tamaño de partícula.
+                    </p>
+
+                    <p>
+                        <strong>Responsable:</strong>
+                        Operario de Cernido / Molinero.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 7 -->
+
+            <div class="subprocess">
+
+                <div class="subprocess-header">
+
+                    <div class="subprocess-title">
+
+                        <span class="subprocess-number">
+                            07
+                        </span>
+
+                        <h3>
+                            Purificación
+                        </h3>
+
+                    </div>
+
+                    <i class="fa-solid fa-plus"></i>
+
+                </div>
+
+
+                <div class="subprocess-content">
+
+                    <p>
+                        <strong>Objetivo:</strong>
+                        Mejorar la pureza y color de la harina.
+                    </p>
+
+                    <p>
+                        <strong>Responsable:</strong>
+                        Operario de Molienda / Molinero.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 8 -->
+
+            <div class="subprocess">
+
+                <div class="subprocess-header">
+
+                    <div class="subprocess-title">
+
+                        <span class="subprocess-number">
+                            08
+                        </span>
+
+                        <h3>
+                            Almacenamiento de harina
+                        </h3>
+
+                    </div>
+
+                    <i class="fa-solid fa-plus"></i>
+
+                </div>
+
+
+                <div class="subprocess-content">
+
+                    <p>
+                        <strong>Objetivo:</strong>
+                        Almacenar y homogeneizar la harina terminada.
+                    </p>
+
+                    <p>
+                        <strong>Responsable:</strong>
+                        Jefe de Calidad / Operario de Silos.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 9 -->
+
+            <div class="subprocess">
+
+                <div class="subprocess-header">
+
+                    <div class="subprocess-title">
+
+                        <span class="subprocess-number">
+                            09
+                        </span>
+
+                        <h3>
+                            Empaque
+                        </h3>
+
+                    </div>
+
+                    <i class="fa-solid fa-plus"></i>
+
+                </div>
+
+
+                <div class="subprocess-content">
+
+                    <p>
+                        <strong>Objetivo:</strong>
+                        Dosificar, envasar, sellar y pesar.
+                    </p>
+
+                    <p>
+                        <strong>Responsable:</strong>
+                        Jefe de Empaque / Operarios.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 10 -->
+
+            <div class="subprocess">
+
+                <div class="subprocess-header">
+
+                    <div class="subprocess-title">
+
+                        <span class="subprocess-number">
+                            10
+                        </span>
+
+                        <h3>
+                            Despacho y almacenamiento
+                        </h3>
+
+                    </div>
+
+                    <i class="fa-solid fa-plus"></i>
+
+                </div>
+
+
+                <div class="subprocess-content">
+
+                    <p>
+                        <strong>Objetivo:</strong>
+                        Entregar el producto terminado
+                        manteniendo su trazabilidad.
+                    </p>
+
+                    <p>
+                        <strong>Responsable:</strong>
+                        Jefe de Bodega / Operador de Montacargas.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     DISTRIBUCIÓN DE PLANTA
+===================================================== -->
+
+<section class="plant"
+         id="planta">
+
+    <div class="container">
+
+
+        <div class="section-header">
+
+            <div class="section-label">
+                Diseño industrial
+            </div>
+
+            <h2 class="section-title">
+                Distribución de la planta
+            </h2>
+
+            <p class="section-description">
+
+                Representación de las áreas productivas,
+                recorridos, maquinaria y organización
+                espacial de la planta.
+
+            </p>
+
+        </div>
+
+
+        <div class="plant-layout">
+
+
+            <!-- PLANO 2D -->
+
+            <div class="plant-card">
+
+                <div class="plant-content">
+
+                    <h3>
+                        Plano 2D
+                    </h3>
+
+                    <p>
+                        Espacio reservado para incorporar
+                        el plano de distribución de la planta
+                        con áreas, maquinaria, recorridos
+                        y cotas.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- MODELO 3D -->
+
+            <div class="plant-card model">
+
+                <div class="plant-content">
+
+                    <h3>
+                        Modelo 3D
+                    </h3>
+
+                    <p>
+                        Espacio reservado para incorporar
+                        posteriormente el modelo desarrollado
+                        en SketchUp.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     LOCALIZACIÓN
+===================================================== -->
+
+<section class="location">
+
+    <div class="container">
+
+
+        <div class="section-header">
+
+            <div class="section-label">
+                Ubicación
+            </div>
+
+            <h2 class="section-title">
+                Localización de la planta
+            </h2>
+
+            <p class="section-description">
+
+                Propuesta de localización considerando
+                disponibilidad de materias primas,
+                infraestructura, transporte y mercado.
+
+            </p>
+
+        </div>
+
+
+        <div class="location-grid">
+
+
+            <div class="location-info">
+
+                <h3>
+                    Bogotá D.C.
+                </h3>
+
+
+                <p>
+
+                    Para el proyecto se plantea una
+                    localización estratégica en Bogotá
+                    y su área industrial, considerando
+                    acceso a infraestructura logística,
+                    servicios y mercados de consumo.
+
+                </p>
+
+
+                <div class="location-item">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <span>
+                        Zona industrial propuesta
+                    </span>
+
+                </div>
+
+
+                <div class="location-item">
+
+                    <i class="fa-solid fa-truck"></i>
+
+                    <span>
+                        Acceso para transporte pesado
+                    </span>
+
+                </div>
+
+
+                <div class="location-item">
+
+                    <i class="fa-solid fa-wheat-awn"></i>
+
+                    <span>
+                        Conexión con cadena de suministro
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="map-placeholder">
+
+                <div>
+
+                    <i class="fa-solid fa-map-location-dot"></i>
+
+                    <h3>
+                        Mapa de localización
+                    </h3>
+
+                    <p>
+                        Aquí podremos colocar posteriormente
+                        el mapa real de la ubicación.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     REFERENCIA
+===================================================== -->
+
+<section class="reference"
+         id="contacto">
+
+    <div class="container">
+
+        <h2>
+            Conoce el proceso
+        </h2>
+
+        <p>
+
+            Como referencia académica se utilizará
+            material audiovisual relacionado con
+            procesos de producción de harina.
+
+        </p>
+
+
+        <a
+            href="https://www.youtube.com/watch?v=yrqVXqq0-OU&list=PL8dJt1YyOQgZux-VxNasluzFa1mwKtiVo&index=76"
+            target="_blank"
+            class="btn btn-primary">
+
+            Ver video de referencia
+
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="container">
+
+
+        <div class="footer-grid">
+
+
+            <div class="footer-logo">
+
+                <img
+                    src="https://www.organizacionmas.com/img/converted_white.svg"
+                    alt="Organización MAS"
+                >
+
+                <p>
+
+                    Proyecto académico de diseño y
+                    distribución de una planta industrial
+                    para la producción de harina de trigo.
+
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h4>
+                    Proyecto
+                </h4>
+
+                <ul>
+
+                    <li>
+                        <a href="#materias">
+                            Materias primas
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#proceso">
+                            Proceso productivo
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#maquinaria">
+                            Maquinaria
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#caracterizacion">
+                            Caracterización
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h4>
+                    Planta
+                </h4>
+
+                <ul>
+
+                    <li>
+                        <a href="#planta">
+                            Distribución
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#planta">
+                            Plano 2D
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#planta">
+                            Modelo 3D
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Localización
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 Organización MAS — Proyecto académico
+            </span>
+
+            <span>
+                Diseño de planta industrial
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+
+    /* =====================================================
+       ACORDEÓN DE SUBPROCESOS
+    ===================================================== */
+
+    const subprocesses =
+        document.querySelectorAll(".subprocess");
+
+
+    subprocesses.forEach((subprocess) => {
+
+
+        const header =
+            subprocess.querySelector(
+                ".subprocess-header"
+            );
+
+
+        header.addEventListener(
+            "click",
+            () => {
+
+
+                subprocess.classList.toggle(
+                    "active"
+                );
+
+
+                const icon =
+                    header.querySelector("i");
+
+
+                if (
+                    subprocess.classList.contains("active")
+                ) {
+
+                    icon.classList.remove(
+                        "fa-plus"
+                    );
+
+                    icon.classList.add(
+                        "fa-minus"
+                    );
+
+                } else {
+
+                    icon.classList.remove(
+                        "fa-minus"
+                    );
+
+                    icon.classList.add(
+                        "fa-plus"
+                    );
+
+                }
+
+            }
+        );
+
+    });
+
+
+</script>
+
+
+</body>
+
+</html>
