@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 
@@ -1592,6 +1593,224 @@
 
 
         /* =====================================================
+           DIAGRAMA DE BLOQUES
+           AGREGADO SIN MODIFICAR LOS ESTILOS ANTERIORES
+        ===================================================== */
+
+        .block-diagram {
+
+            width:
+                100%;
+
+            margin:
+                0 0 55px;
+
+            padding:
+                30px;
+
+            background:
+                #FAF9F6;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                var(--radius);
+
+            box-shadow:
+                0 10px 30px rgba(7,28,44,.06);
+
+            overflow-x:
+                auto;
+        }
+
+
+        .block-diagram-title {
+
+            text-align:
+                center;
+
+            margin-bottom:
+                25px;
+
+            color:
+                var(--mas-dark);
+
+            font-family:
+                'Playfair Display',
+                serif;
+
+            font-size:
+                28px;
+        }
+
+
+        .block-diagram svg {
+
+            display:
+                block;
+
+            width:
+                100%;
+
+            min-width:
+                950px;
+
+            height:
+                auto;
+        }
+
+
+        .block-diagram .node-title {
+
+            font-family:
+                'Montserrat',
+                sans-serif;
+
+            font-size:
+                16px;
+
+            font-weight:
+                700;
+        }
+
+
+        .block-diagram .node-text {
+
+            font-family:
+                'Montserrat',
+                sans-serif;
+
+            font-size:
+                11px;
+        }
+
+
+        .block-diagram .node-io {
+
+            fill:
+                #F2EFE9;
+
+            stroke:
+                #C8C2B7;
+
+            stroke-width:
+                2;
+        }
+
+
+        .block-diagram .node-processor {
+
+            fill:
+                #F0EDFD;
+
+            stroke:
+                #B3A5E6;
+
+            stroke-width:
+                2;
+        }
+
+
+        .block-diagram .node-queue {
+
+            fill:
+                #E8F5EE;
+
+            stroke:
+                #9FD2B6;
+
+            stroke-width:
+                2;
+        }
+
+
+        .block-diagram .node-io-text {
+
+            fill:
+                #333333;
+        }
+
+
+        .block-diagram .node-processor-text {
+
+            fill:
+                #2A1B60;
+        }
+
+
+        .block-diagram .node-queue-text {
+
+            fill:
+                #0E422B;
+        }
+
+
+        .block-diagram .flow-line {
+
+            stroke:
+                #888888;
+
+            stroke-width:
+                2.5;
+
+            fill:
+                none;
+
+            marker-end:
+                url(#arrowhead);
+        }
+
+
+        .block-diagram .percentage {
+
+            font-family:
+                'Montserrat',
+                sans-serif;
+
+            font-size:
+                12px;
+
+            font-weight:
+                700;
+
+            fill:
+                var(--mas-dark);
+        }
+
+
+        .block-diagram .legend-text {
+
+            font-family:
+                'Montserrat',
+                sans-serif;
+
+            font-size:
+                12px;
+
+            fill:
+                var(--text);
+        }
+
+
+        .block-diagram .legend-title {
+
+            font-family:
+                'Montserrat',
+                sans-serif;
+
+            font-size:
+                12px;
+
+            font-weight:
+                700;
+
+            fill:
+                var(--mas-dark);
+        }
+
+
+        /* =====================================================
            LOCALIZACIÓN
         ===================================================== */
 
@@ -1929,6 +2148,11 @@
             .footer-grid {
                 grid-template-columns: 1fr 1fr;
             }
+
+            .block-diagram {
+                padding:
+                    20px;
+            }
         }
 
 
@@ -1963,6 +2187,12 @@
                 flex-direction: column;
                 align-items: flex-start;
             }
+
+            .block-diagram-title {
+                font-size:
+                    24px;
+            }
+
         }
 
     </style>
@@ -3663,6 +3893,623 @@
         </div>
 
 
+        <!-- =====================================================
+             DIAGRAMA DE BLOQUES
+        ===================================================== -->
+
+        <div class="block-diagram">
+
+            <h3 class="block-diagram-title">
+                Diagrama de bloques del proceso
+            </h3>
+
+
+            <svg
+                viewBox="0 0 1200 700"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-label="Diagrama de bloques del proceso de producción de harina"
+            >
+
+                <defs>
+
+                    <marker
+                        id="arrowhead"
+                        markerWidth="10"
+                        markerHeight="10"
+                        refX="9"
+                        refY="3"
+                        orient="auto"
+                        markerUnits="strokeWidth">
+
+                        <path
+                            d="M0,0 L0,6 L9,3 z"
+                            fill="#888888">
+                        </path>
+
+                    </marker>
+
+                </defs>
+
+
+                <!-- =================================================
+                     FILA 1
+                ================================================= -->
+
+                <!-- CAMIONES -->
+
+                <rect
+                    x="40"
+                    y="70"
+                    width="210"
+                    height="90"
+                    rx="12"
+                    class="node-io">
+                </rect>
+
+                <text
+                    x="145"
+                    y="108"
+                    text-anchor="middle"
+                    class="node-title node-io-text">
+
+                    Camiones
+
+                </text>
+
+                <text
+                    x="145"
+                    y="132"
+                    text-anchor="middle"
+                    class="node-text node-io-text">
+
+                    Source
+
+                </text>
+
+
+                <!-- RECEPCIÓN -->
+
+                <rect
+                    x="330"
+                    y="70"
+                    width="210"
+                    height="90"
+                    rx="12"
+                    class="node-processor">
+                </rect>
+
+                <text
+                    x="435"
+                    y="108"
+                    text-anchor="middle"
+                    class="node-title node-processor-text">
+
+                    Recepción
+
+                </text>
+
+                <text
+                    x="435"
+                    y="132"
+                    text-anchor="middle"
+                    class="node-text node-processor-text">
+
+                    Processor
+
+                </text>
+
+
+                <!-- SILOS -->
+
+                <rect
+                    x="620"
+                    y="70"
+                    width="210"
+                    height="90"
+                    rx="12"
+                    class="node-queue">
+                </rect>
+
+                <text
+                    x="725"
+                    y="108"
+                    text-anchor="middle"
+                    class="node-title node-queue-text">
+
+                    Silos de trigo
+
+                </text>
+
+                <text
+                    x="725"
+                    y="132"
+                    text-anchor="middle"
+                    class="node-text node-queue-text">
+
+                    Queue, 3105 t
+
+                </text>
+
+
+                <!-- LIMPIEZA -->
+
+                <rect
+                    x="910"
+                    y="70"
+                    width="210"
+                    height="90"
+                    rx="12"
+                    class="node-processor">
+                </rect>
+
+                <text
+                    x="1015"
+                    y="108"
+                    text-anchor="middle"
+                    class="node-title node-processor-text">
+
+                    Limpieza
+
+                </text>
+
+                <text
+                    x="1015"
+                    y="132"
+                    text-anchor="middle"
+                    class="node-text node-processor-text">
+
+                    Processor
+
+                </text>
+
+
+                <!-- =================================================
+                     FILA 2
+                ================================================= -->
+
+                <!-- REPOSO -->
+
+                <rect
+                    x="910"
+                    y="280"
+                    width="210"
+                    height="90"
+                    rx="12"
+                    class="node-queue">
+                </rect>
+
+                <text
+                    x="1015"
+                    y="318"
+                    text-anchor="middle"
+                    class="node-title node-queue-text">
+
+                    Reposo trigo
+
+                </text>
+
+                <text
+                    x="1015"
+                    y="342"
+                    text-anchor="middle"
+                    class="node-text node-queue-text">
+
+                    Queue 12–24 h
+
+                </text>
+
+
+                <!-- MOLIENDA -->
+
+                <rect
+                    x="620"
+                    y="280"
+                    width="210"
+                    height="90"
+                    rx="12"
+                    class="node-processor">
+                </rect>
+
+                <text
+                    x="725"
+                    y="318"
+                    text-anchor="middle"
+                    class="node-title node-processor-text">
+
+                    Molienda
+
+                </text>
+
+                <text
+                    x="725"
+                    y="342"
+                    text-anchor="middle"
+                    class="node-text node-processor-text">
+
+                    13,6 t/h
+
+                </text>
+
+
+                <!-- SEPARATOR -->
+
+                <rect
+                    x="330"
+                    y="280"
+                    width="210"
+                    height="90"
+                    rx="12"
+                    class="node-processor">
+                </rect>
+
+                <text
+                    x="435"
+                    y="318"
+                    text-anchor="middle"
+                    class="node-title node-processor-text">
+
+                    Separator
+
+                </text>
+
+                <text
+                    x="435"
+                    y="342"
+                    text-anchor="middle"
+                    class="node-text node-processor-text">
+
+                    75 % / 25 %
+
+                </text>
+
+
+                <!-- SUBPRODUCTOS -->
+
+                <rect
+                    x="40"
+                    y="280"
+                    width="210"
+                    height="90"
+                    rx="12"
+                    class="node-queue">
+                </rect>
+
+                <text
+                    x="145"
+                    y="318"
+                    text-anchor="middle"
+                    class="node-title node-queue-text">
+
+                    Subproductos
+
+                </text>
+
+                <text
+                    x="145"
+                    y="342"
+                    text-anchor="middle"
+                    class="node-text node-queue-text">
+
+                    Queue, 225 t
+
+                </text>
+
+
+                <!-- =================================================
+                     FILA 3
+                ================================================= -->
+
+                <!-- ENSACADO -->
+
+                <rect
+                    x="330"
+                    y="490"
+                    width="210"
+                    height="90"
+                    rx="12"
+                    class="node-processor">
+                </rect>
+
+                <text
+                    x="435"
+                    y="528"
+                    text-anchor="middle"
+                    class="node-title node-processor-text">
+
+                    Ensacado
+
+                </text>
+
+                <text
+                    x="435"
+                    y="552"
+                    text-anchor="middle"
+                    class="node-text node-processor-text">
+
+                    Processor
+
+                </text>
+
+
+                <!-- BODEGA -->
+
+                <rect
+                    x="620"
+                    y="490"
+                    width="210"
+                    height="90"
+                    rx="12"
+                    class="node-queue">
+                </rect>
+
+                <text
+                    x="725"
+                    y="528"
+                    text-anchor="middle"
+                    class="node-title node-queue-text">
+
+                    Bodega harina
+
+                </text>
+
+                <text
+                    x="725"
+                    y="552"
+                    text-anchor="middle"
+                    class="node-text node-queue-text">
+
+                    Rack, 1125 t
+
+                </text>
+
+
+                <!-- DESPACHO -->
+
+                <rect
+                    x="910"
+                    y="490"
+                    width="210"
+                    height="90"
+                    rx="12"
+                    class="node-io">
+                </rect>
+
+                <text
+                    x="1015"
+                    y="528"
+                    text-anchor="middle"
+                    class="node-title node-io-text">
+
+                    Despacho
+
+                </text>
+
+                <text
+                    x="1015"
+                    y="552"
+                    text-anchor="middle"
+                    class="node-text node-io-text">
+
+                    Sink
+
+                </text>
+
+
+                <!-- =================================================
+                     FLUJO DEL PROCESO
+                ================================================= -->
+
+                <!-- Camiones → Recepción -->
+
+                <line
+                    x1="250"
+                    y1="115"
+                    x2="330"
+                    y2="115"
+                    class="flow-line">
+                </line>
+
+
+                <!-- Recepción → Silos -->
+
+                <line
+                    x1="540"
+                    y1="115"
+                    x2="620"
+                    y2="115"
+                    class="flow-line">
+                </line>
+
+
+                <!-- Silos → Limpieza -->
+
+                <line
+                    x1="830"
+                    y1="115"
+                    x2="910"
+                    y2="115"
+                    class="flow-line">
+                </line>
+
+
+                <!-- Limpieza → Reposo -->
+
+                <line
+                    x1="1015"
+                    y1="160"
+                    x2="1015"
+                    y2="280"
+                    class="flow-line">
+                </line>
+
+
+                <!-- Reposo → Molienda -->
+
+                <line
+                    x1="910"
+                    y1="325"
+                    x2="830"
+                    y2="325"
+                    class="flow-line">
+                </line>
+
+
+                <!-- Molienda → Separator -->
+
+                <line
+                    x1="620"
+                    y1="325"
+                    x2="540"
+                    y2="325"
+                    class="flow-line">
+                </line>
+
+
+                <!-- Separator → Subproductos -->
+
+                <line
+                    x1="330"
+                    y1="325"
+                    x2="250"
+                    y2="325"
+                    class="flow-line">
+                </line>
+
+
+                <!-- Separator → Ensacado -->
+
+                <line
+                    x1="435"
+                    y1="370"
+                    x2="435"
+                    y2="490"
+                    class="flow-line">
+                </line>
+
+
+                <!-- Ensacado → Bodega -->
+
+                <line
+                    x1="540"
+                    y1="535"
+                    x2="620"
+                    y2="535"
+                    class="flow-line">
+                </line>
+
+
+                <!-- Bodega → Despacho -->
+
+                <line
+                    x1="830"
+                    y1="535"
+                    x2="910"
+                    y2="535"
+                    class="flow-line">
+                </line>
+
+
+                <!-- =================================================
+                     PORCENTAJES
+                ================================================= -->
+
+                <text
+                    x="285"
+                    y="310"
+                    text-anchor="middle"
+                    class="percentage">
+
+                    25 %
+
+                </text>
+
+
+                <text
+                    x="455"
+                    y="425"
+                    text-anchor="start"
+                    class="percentage">
+
+                    75 %
+
+                </text>
+
+
+                <!-- =================================================
+                     LEYENDA
+                ================================================= -->
+
+                <text
+                    x="40"
+                    y="650"
+                    class="legend-title">
+
+                    Leyenda:
+
+                </text>
+
+
+                <rect
+                    x="120"
+                    y="635"
+                    width="22"
+                    height="22"
+                    rx="4"
+                    class="node-processor">
+                </rect>
+
+                <text
+                    x="152"
+                    y="652"
+                    class="legend-text">
+
+                    Procesadores
+
+                </text>
+
+
+                <rect
+                    x="300"
+                    y="635"
+                    width="22"
+                    height="22"
+                    rx="4"
+                    class="node-queue">
+                </rect>
+
+                <text
+                    x="332"
+                    y="652"
+                    class="legend-text">
+
+                    Almacenamiento
+
+                </text>
+
+
+                <rect
+                    x="505"
+                    y="635"
+                    width="22"
+                    height="22"
+                    rx="4"
+                    class="node-io">
+                </rect>
+
+                <text
+                    x="537"
+                    y="652"
+                    class="legend-text">
+
+                    Entrada y salida
+
+                </text>
+
+            </svg>
+
+        </div>
+
+
         <div class="plant-layout">
 
 
@@ -4070,3 +4917,4 @@
 </body>
 
 </html>
+```
