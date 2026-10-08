@@ -38,6 +38,23 @@
         /* =====================================================
            VARIABLES
         ===================================================== */
+    
+    
+        .plant-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+        }
+
+        .plant-placeholder video {
+    width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
 
         :root {
 
@@ -2345,11 +2362,30 @@
 
 </section>
 
+<!-- =====================================================
+     IMAGEN DE LA PLANTA
+===================================================== -->
 
+<section class="plant-image-section">
+
+    <div class="container">
+
+        <img 
+            src="../images/plano.png" 
+            alt="Diseño de la planta de producción de harina"
+            class="plant-main-image"
+        >
+
+    </div>
+
+</section>
 
 <!-- =====================================================
      INTRODUCCIÓN
 ===================================================== -->
+
+
+
 
 <section class="intro">
 
@@ -2556,11 +2592,7 @@
 
                 <div class="material-image">
 
-                    <i class="fa-solid fa-wheat-awn"></i>
-
-                    <span class="image-placeholder">
-                        ESPACIO PARA IMAGEN
-                    </span>
+                    <img src="../images/trigo.png" alt="Grano de trigo">  
 
                 </div>
 
@@ -2596,11 +2628,8 @@
 
                 <div class="material-image">
 
-                    <i class="fa-solid fa-droplet"></i>
-
-                    <span class="image-placeholder">
-                        ESPACIO PARA IMAGEN
-                    </span>
+                    <img src="../images/aguatratada.png" alt="Agua tratada">
+  
 
                 </div>
 
@@ -2636,7 +2665,7 @@
 
                 <div class="material-image">
 
-                    <i class="fa-solid fa-bolt"></i>
+                    <img src="../images/energiaelectrica.png" alt="Energía eléctrica">
 
                 </div>
 
@@ -2671,7 +2700,7 @@
 
                 <div class="material-image">
 
-                    <i class="fa-solid fa-flask"></i>
+                    <img src="../images/vitaminasMinerales.png" alt="Vitaminas y minerales">
 
                 </div>
 
@@ -2706,11 +2735,8 @@
 
                 <div class="material-image">
 
-                    <i class="fa-solid fa-box"></i>
+                    <img src="../images/sacos.png" alt="Sacos y empalme">
 
-                    <span class="image-placeholder">
-                        ESPACIO PARA IMAGEN
-                    </span>
 
                 </div>
 
@@ -2745,7 +2771,7 @@
 
                 <div class="material-image">
 
-                    <i class="fa-solid fa-spray-can-sparkles"></i>
+                    <img src="../images/calidad.png" alt="Insumos de saneamiento">
 
                 </div>
 
@@ -4512,49 +4538,24 @@
 
         <div class="plant-layout">
 
+    <!-- PLANO 2D -->
+    <div class="plant-placeholder">
+        <h3>Plano 2D</h3>
 
-            <!-- PLANO 2D -->
+        <img 
+            src="../images/plano2d.png" 
+            alt="Plano 2D de la planta">
+    </div>
 
-            <div class="plant-card">
+    <!-- MODELO 3D -->
+<div class="plant-placeholder">
+    <h3>Modelo 3D</h3>
 
-                <div class="plant-content">
-
-                    <h3>
-                        Plano 2D
-                    </h3>
-
-                    <p>
-                        Espacio reservado para incorporar
-                        el plano de distribución de la planta
-                        con áreas, maquinaria, recorridos
-                        y cotas.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- MODELO 3D -->
-
-            <div class="plant-card model">
-
-                <div class="plant-content">
-
-                    <h3>
-                        Modelo 3D
-                    </h3>
-
-                    <p>
-                        Espacio reservado para incorporar
-                        posteriormente el modelo desarrollado
-                        en SketchUp.
-                    </p>
-
-                </div>
-
-            </div>
-
+    <video controls>
+        <source src="../images/modelo3d.mp4" type="video/mp4">
+        Tu navegador no soporta la reproducción de video.
+    </video>
+</div>
 
         </div>
 
@@ -4651,24 +4652,7 @@
             </div>
 
 
-            <div class="map-placeholder">
-
-                <div>
-
-                    <i class="fa-solid fa-map-location-dot"></i>
-
-                    <h3>
-                        Mapa de localización
-                    </h3>
-
-                    <p>
-                        Aquí podremos colocar posteriormente
-                        el mapa real de la ubicación.
-                    </p>
-
-                </div>
-
-            </div>
+            
 
 
         </div>
@@ -4819,10 +4803,16 @@
 
                 </ul>
 
+                <span>
+                Elaborado por: Valeria Josa, Santiago Castro
+            </span>
+
             </div>
 
 
         </div>
+
+    
 
 
         <div class="footer-bottom">
@@ -4830,6 +4820,7 @@
             <span>
                 © 2026 Organización MAS — Proyecto académico
             </span>
+
 
             <span>
                 Diseño de planta industrial
